@@ -16,7 +16,7 @@ setupdocs: setuptools
 	python -m pip install -r docs/requirements.txt
 
 dev: setuptools
-	python -m pip install '.[test]'
+	python -m pip install -e '.[test]'
 
 clean:
 	cd docs/ && make clean
