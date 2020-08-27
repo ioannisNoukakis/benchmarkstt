@@ -59,7 +59,8 @@ setup(
         'jsonrpcserver>=4.0.1',
         'gunicorn>=19.9.0',
         'docutils>=0.14',
-        'editdistance>=0.5.3'
+        'editdistance>=0.5.3',
+        'Flask-Cors>=3.0.8'
     ],
     extras_require={
         'test': [

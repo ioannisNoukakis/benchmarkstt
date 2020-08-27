@@ -11,6 +11,8 @@ Make benchmarkstt available through a rudimentary JSON-RPC_ interface
 
 import jsonrpcserver
 from flask import Flask, request, Response, render_template
+from flask_cors import CORS
+
 from benchmarkstt.docblock import format_docs, parse, process_rst
 from .jsonrpc import get_methods
 
@@ -49,6 +51,7 @@ def create_app(entrypoint: str = None, with_explorer: bool = None):
     """
 
     app = Flask(__name__)
+    CORS(app)
 
     if entrypoint is None:
         entrypoint = '/api'
